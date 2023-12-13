@@ -1,5 +1,7 @@
 import random
 
+import random
+
 def generate_username(prefixes, names, email_domain):
     random_prefix = random.choice(prefixes).capitalize()
     
@@ -10,15 +12,17 @@ def generate_username(prefixes, names, email_domain):
     while len(random_name) < 3:
         random_name += random.choice("abcdefghijklmnopqrstuvwxyz")
 
-    # Take the last three characters of the name
-    random_name = random_name[-3:]
+    # Optionally Take the last three characters off the name
+    # random_name = random_name[-3:]
 
-    # Generate three random digits
-    random_digits = random.randint(100, 999)
+    # Optionally Generate three random digits
+    # random_digits = random.randint(0, 999)
 
-    username = f"{random_prefix}{random_name}{random_digits}{email_domain}"
+    username = f"{random_prefix}{random_name}{email_domain}" # {random_digits}
 
     return username
+
+
 
 def main():
     try:
