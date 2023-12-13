@@ -16,9 +16,9 @@ def generate_username(prefixes, names, email_domain):
     # random_name = random_name[-3:]
 
     # Optionally Generate three random digits
-    # random_digits = random.randint(0, 999)
+    random_digits = random.randint(0, 999)
 
-    username = f"{random_prefix}{random_name}{email_domain}" # {random_digits}
+    username = f"{random_prefix}{random_name}{random_digits}{email_domain}" # You can remove random digits
 
     return username
 
